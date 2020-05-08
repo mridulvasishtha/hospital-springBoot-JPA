@@ -29,6 +29,7 @@ public class DoctorService {
     Set<Speciality> set=new HashSet<>();
         set.add(sp);
         Doctor d=new Doctor(firstName,lastName,phone,staffId, EStaff.valueOf(type),set);
+
         return doctorRepo.save(d);
     }
 

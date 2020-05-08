@@ -5,6 +5,7 @@ import com.mridul.hospital.hospitalmutimodule.service.DoctorService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -29,17 +30,17 @@ public class DoctorController {
 
 
     @ResponseBody
-    @RequestMapping(value="/addDoctor/{firstName}/{lastName}/{phone}/{staffId}/{type}/{speciality}")
-    public Doctor addDoctor(@PathVariable("firstName")String firstName,@PathVariable("lastName")String lastName,@PathVariable("phone")String phone,
-                            @PathVariable("staffId")Integer staffId,@PathVariable("type")String type,@PathVariable("speciality")String speciality){
-        System.out.println("Ayya si");
+    @RequestMapping(value="/addDoctor/{firstName}")
+    public Doctor addDoctor(@PathVariable("firstName")String firstName, @RequestParam(value="lastName",required=false)String lastName,
+                            @RequestParam(value="phone",required=false)String phone,
+                            @RequestParam(value="staffId")Integer staffId, @RequestParam(value="type",required = false)String type,
+                            @RequestParam(value="speciality",required=false)String speciality){
         return doctorService.addDoctor(firstName,lastName,phone,staffId,type,speciality);
     }
 
     @ResponseBody
     @RequestMapping(value="/removeDoctor/{firstName}")
     public String removeDoctor(@PathVariable("firstName")String firstName){
-        System.out.println("Ayya si");
         return doctorService.removeDoctor(firstName);
     }
 }

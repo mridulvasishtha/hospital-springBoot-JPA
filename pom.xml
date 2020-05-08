@@ -6,6 +6,7 @@
     <modules>
         <module>hospital-data</module>
         <module>hospital-web</module>
+       <!-- <module>hospital-payements</module>-->
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -17,6 +17,11 @@
         <groupId>com.mridul.hospital</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </dependency>
+<!--    <dependency>-->
+<!--        <artifactId>hospital-payements</artifactId>-->
+<!--        <groupId>com.mridul.hospital</groupId>-->
+<!--        <version>0.0.1-SNAPSHOT</version>-->
+<!--    </dependency>-->
 
     <dependency>
         <groupId>org.springframework.boot</groupId>
