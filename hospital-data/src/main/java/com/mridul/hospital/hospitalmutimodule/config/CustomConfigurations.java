@@ -20,5 +20,4 @@ public class CustomConfigurations {
         profileData.setHostAddress("http://localhost:8081/");
         return profileData;
     }
-
 }
