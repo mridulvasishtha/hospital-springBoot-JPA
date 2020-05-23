@@ -1,4 +1,4 @@
-package com.mridul.hospital.hospitalmutimodule;
+package com.mridul.hospital.hospitalmutimodule.configuration;
 import java.util.HashMap;
 
 import javax.sql.DataSource;
